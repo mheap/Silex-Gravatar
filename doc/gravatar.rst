@@ -42,7 +42,7 @@ directory.
             'size' => 100,
             'rating' => Gravatar\Service::RATING_G,
             'secure' => true,
-            'default'   => Gravatar\Service::RATING_404,
+            'default'   => Gravatar\Service::DEFAULT_404,
             'force_default' => true
         )    
     ));
