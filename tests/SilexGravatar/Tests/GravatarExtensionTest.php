@@ -1,12 +1,12 @@
 <?php
 
-namespace SilexExtension\Tests\Extension;
+namespace SilexGravatar\Tests\Extension;
 
 use Silex\Application;
 
 use Symfony\Component\HttpFoundation\Request;
 
-use SilexExtension\GravatarExtension;
+use SilexGravatar\GravatarExtension;
 
 use Gravatar\Service;
 
@@ -23,7 +23,6 @@ class GravatarExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
         $app->register(new GravatarExtension(), array(
-            'gravatar.class_path' => __DIR__ . '/../../../vendor/gravatar-php/src',
             'gravatar.options'  => array(
                 'size' => 999,
                 'rating' => 'pg',

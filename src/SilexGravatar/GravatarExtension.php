@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SilexExtension;
+namespace SilexGravatar;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
