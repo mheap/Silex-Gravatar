@@ -4,8 +4,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-$app->register(new Silex\Extension\TwigExtension(), array(
-    'twig.path'       => __DIR__ . '/twig'
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/twig',
 ));
         
 $app->register(new SilexGravatar\GravatarExtension(), array(
