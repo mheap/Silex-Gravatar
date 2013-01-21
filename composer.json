@@ -18,9 +18,15 @@
             "homepage": "http://michaelheap.com/"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git://github.com/sveneisenschmidt/Gravatar-php.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.0",
-        "fate/gravatar-php": "*"
+        "fate/gravatar-php": "dev-master"
     },
     "require-dev": {
         "silex/silex": "*",

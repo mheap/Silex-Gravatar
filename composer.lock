@@ -1,104 +1,45 @@
 {
-    "hash": "34e6253296822323e0db26f8a2631331",
+    "hash": "c620d2e7de42dc6236ef0e095d2a674c",
     "packages": [
         {
-            "package": "fate/gravatar-php",
+            "name": "fate/gravatar-php",
             "version": "dev-master",
-            "source-reference": "0c5df5962b565af47245949e52bc1778ac356439",
-            "commit-date": "1331306239"
+            "source": {
+                "type": "git",
+                "url": "git://github.com/sveneisenschmidt/Gravatar-php.git",
+                "reference": "0c5df5962b565af47245949e52bc1778ac356439"
+            },
+            "time": "2012-03-09 15:17:19",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Gravatar": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Eisenschmidt",
+                    "email": "sven.eisenschmidt@gmail.com",
+                    "homepage": "http://unsicherheitsagent.de/"
+                }
+            ],
+            "description": "PHP 5.3 Library for Gravatar (gravatar.com)",
+            "homepage": "https://github.com/fate/Gravatar-php",
+            "keywords": [
+                "gravatar"
+            ]
         }
     ],
-    "packages-dev": [
-        {
-            "package": "pimple/pimple",
-            "version": "dev-master",
-            "alias-pretty-version": "1.0.x-dev",
-            "alias-version": "1.0.9999999.9999999-dev"
-        },
-        {
-            "package": "pimple/pimple",
-            "version": "dev-master",
-            "source-reference": "86df0604a10c5faf20b466ae6a0b762cc6ed0a35",
-            "commit-date": "1352622754"
-        },
-        {
-            "package": "silex/silex",
-            "version": "dev-master",
-            "alias-pretty-version": "1.0.x-dev",
-            "alias-version": "1.0.9999999.9999999-dev"
-        },
-        {
-            "package": "silex/silex",
-            "version": "dev-master",
-            "source-reference": "7e5e1f88990c010351093691a7ca01e2e94c2706",
-            "commit-date": "1352821595"
-        },
-        {
-            "package": "symfony/event-dispatcher",
-            "version": "dev-master",
-            "alias-pretty-version": "2.2.x-dev",
-            "alias-version": "2.2.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/event-dispatcher",
-            "version": "dev-master",
-            "source-reference": "eb290a447c0af5bea0d3de5d95d498afd8c82f89",
-            "commit-date": "1352815684"
-        },
-        {
-            "package": "symfony/http-foundation",
-            "version": "dev-master",
-            "alias-pretty-version": "2.2.x-dev",
-            "alias-version": "2.2.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/http-foundation",
-            "version": "dev-master",
-            "source-reference": "48745abaa7eb1855d510565fbdd2537d0adf8934",
-            "commit-date": "1352825855"
-        },
-        {
-            "package": "symfony/http-kernel",
-            "version": "dev-master",
-            "alias-pretty-version": "2.2.x-dev",
-            "alias-version": "2.2.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/http-kernel",
-            "version": "dev-master",
-            "source-reference": "291fdd212983f39eb56a904a8fbdc39e285d5728",
-            "commit-date": "1352815684"
-        },
-        {
-            "package": "symfony/routing",
-            "version": "dev-master",
-            "alias-pretty-version": "2.2.x-dev",
-            "alias-version": "2.2.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/routing",
-            "version": "dev-master",
-            "source-reference": "c9fd6348adb1c1180b5f8d8a41371fd0e167ff99",
-            "commit-date": "1353167932"
-        },
-        {
-            "package": "twig/twig",
-            "version": "dev-master",
-            "alias-pretty-version": "1.12.x-dev",
-            "alias-version": "1.12.9999999.9999999-dev"
-        },
-        {
-            "package": "twig/twig",
-            "version": "dev-master",
-            "source-reference": "11368e7e08bc1c9626317fe28e3fdd1855e17198",
-            "commit-date": "1353099404"
-        }
-    ],
+    "packages-dev": null,
     "aliases": [
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "fate/gravatar-php": 20
+    }
 }
