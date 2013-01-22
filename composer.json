@@ -20,6 +20,7 @@
     ],
     "repositories": [
         {
+            "name": "fate/gravatar-php",
             "type": "git",
             "url":  "git://github.com/sveneisenschmidt/Gravatar-php.git"
         }
