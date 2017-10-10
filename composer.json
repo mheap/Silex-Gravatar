@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=7.0",
-        "mheap/gravatar-php": "^2.0"
+        "se/gravatar-php": "^2.0"
     },
     "require-dev": {
         "silex/silex": "2.*",
