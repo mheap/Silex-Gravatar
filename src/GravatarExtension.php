@@ -3,44 +3,44 @@
 
 namespace SilexGravatar;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 
-use Gravatar\Service,
-    Gravatar\Cache\FilesystemCache,
-    Gravatar\Cache\ExpiringCache,
-    Gravatar\Extension\Twig\GravatarExtension as TwigGravatarExtension;
+use Gravatar\Service;
+use Gravatar\Cache\FilesystemCache;
+use Gravatar\Cache\ExpiringCache;
+use Gravatar\Extension\Twig\GravatarExtension as TwigGravatarExtension;
 
 class GravatarExtension implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(Container $app)
     {
-
-    }
-
-    public function boot(Application $app)
-    {
-        $app['gravatar.cache'] = $app->share(function () use ($app) {
+        $app['gravatar.cache'] = function ($app) {
             $cache = null;
-            if(isset($app['gravatar.cache_dir'])) {
+            if (isset($app['gravatar.cache_dir'])) {
                 $ttl   = isset($app['gravatar.cache_ttl']) ? $app['gravatar.cache_ttl'] : 360;
                 $file  = new FilesystemCache($app['gravatar.cache_dir']);
                 $cache = new ExpiringCache($file, $ttl);
             }
             return $cache;
-        });
+        };
 
-        $app['gravatar'] = $app->share(function () use ($app) {
+        $app['gravatar'] = function ($app) {
             $options = isset($app['gravatar.options']) ? $app['gravatar.options'] : array();
+
+            // HTTPS by default
+            if (!isset($options['secure'])) {
+                $options['secure'] = true;
+            }
+
             return new Service($options, $app['gravatar.cache']);
-        });
+        };
 
         if (isset($app['twig'])) {
-            $app['twig'] = $app->share($app->extend('twig', function ($twig, $app) {
+            $app['twig'] = $app->extend('twig', function ($twig, $app) {
                 $twig->addExtension(new TwigGravatarExtension($app['gravatar']));
-
                 return $twig;
-            }));
+            });
         }
     }
 }
